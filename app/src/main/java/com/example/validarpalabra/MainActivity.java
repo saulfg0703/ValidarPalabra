@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
             palabraEnCaracteres[i] ='_';
         }
         resultadoTextoPalabra.setText(String.valueOf(palabraEnCaracteres));
+        letra.setText("");
     }
 
-    public void jugar(View view) {
+    public void comprobarLetra(View view) {
         //Variable centinela para disminuir los intentos que tienes en caso de que no aciertes la letra
         boolean fallar = false;
         //Convertimos la palabra escogida en un array de caracteres
@@ -74,7 +75,5 @@ public class MainActivity extends AppCompatActivity {
         }if (intentosReales == 0) {
             Toast.makeText(this, "Has perdido, te quedaste sin intentos !!!", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 }
